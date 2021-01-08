@@ -1,1 +1,3 @@
-# Http-Client-Server
+The HttpClient class instance acts as a session to send HTTP requests. An HttpClient instance is a collection of settings applied to all requests executed by that instance. In addition, every HttpClient instance uses its own connection pool, isolating its requests from requests executed by other HttpClient instances.
+
+The HttpClient also acts as a base class for more specific HTTP clients. An example would be a FacebookHttpClient providing additional methods specific to a Facebook web service (a GetFriends method, for instance). Derived classes should not override the virtual methods on the class. Instead, use a constructor overload that accepts HttpMessageHandler to configure any pre- or post-request processing instead.
